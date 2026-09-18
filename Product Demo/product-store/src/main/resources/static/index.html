@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Product Store</title>
+
+    <link rel="stylesheet"
+          href="./css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🛒 Mini Product Store</h1>
+
+    <button onclick="toggleCart()">
+        Cart
+        (<span id="cart-count">0</span>)
+    </button>
+
+</header>
+
+
+<section class="filters">
+
+    <input
+            id="search"
+            type="text"
+            placeholder="Search products..."
+            oninput="filterProducts()">
+
+    <select
+            id="category"
+            onchange="filterProducts()">
+
+        <option value="all">
+            All Categories
+        </option>
+
+        <option value="Electronics">
+            Electronics
+        </option>
+
+        <option value="Fashion">
+            Fashion
+        </option>
+
+    </select>
+
+
+    <select
+            id="stockFilter"
+            onchange="filterProducts()">
+
+        <option value="all">
+            All Products
+        </option>
+
+        <option value="in">
+            In Stock
+        </option>
+
+        <option value="out">
+            Out of Stock
+        </option>
+
+    </select>
+
+</section>
+
+
+<main>
+
+    <section>
+
+        <h2>Products</h2>
+
+        <div
+                id="products"
+                class="product-container">
+        </div>
+
+    </section>
+
+
+    <section
+            id="cart-section"
+            class="cart-section">
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>
+            Total:
+            ₹<span id="cart-total">0</span>
+        </h3>
+
+    </section>
+
+</main>
+
+
+<script src="./js/app.js"></script>
+
+</body>
+
+</html>
